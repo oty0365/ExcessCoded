@@ -7527,10 +7527,95 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 565954813140837922, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 570176890910636670, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 608882165582187378, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 986327961819366853, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
     - target: {fileID: 2634105552604924283, guid: 00c162dfd5b15e34985d66fc7fc46fce,
         type: 3}
       propertyPath: m_Name
       value: CardMaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209330615336808065, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239701221344129369, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486080239629561456, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670945857666943153, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 4789401623863673166, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864797158658695056, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 5294821078104422661, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378699334726923979, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860528074475941035, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 7048403127769773779, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 7429565419388147762, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103026426725186698, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
+      objectReference: {fileID: 0}
+    - target: {fileID: 8120617864776996071, guid: 00c162dfd5b15e34985d66fc7fc46fce,
+        type: 3}
+      propertyPath: m_TagString
+      value: cardmasterhand
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
