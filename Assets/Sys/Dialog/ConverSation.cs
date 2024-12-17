@@ -33,8 +33,10 @@ namespace system
     [Header("말을 반복하는지에대한 여부")]
     public bool repeat;
     public Action startTalk;
+    public static bool pause;
     private void Start()
     {
+      pause = false;
       curLocation = new DialogLocation();
       startTalk = Talk;
       _value = 1f;
@@ -85,15 +87,22 @@ namespace system
       PutText();
       while (true)
       {
-        if (Input.GetKeyDown(KeyCode.Space) && header.dialogs[curindx].canSelect && !_selectionModal.activeSelf)
+        if (pause)
         {
-          _selectionModal.SetActive(true);
-          StartCoroutine(SelectionFlow());
-          yield break;
+          _conversationModal.SetActive(false);
+          yield return null;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && !header.dialogs[curindx].canSelect)
+        else
         {
-          header.dialogs[curindx].comingEvent.Invoke();
+          if (Input.GetKeyDown(KeyCode.Space) && header.dialogs[curindx].canSelect && !_selectionModal.activeSelf)
+          {
+            _selectionModal.SetActive(true);
+            StartCoroutine(SelectionFlow());
+            yield break;
+          }
+          if (Input.GetKeyDown(KeyCode.Space) && !header.dialogs[curindx].canSelect)
+          {
+            header.dialogs[curindx].comingEvent.Invoke();
             if (curindx < header.dialogs.Length-1)
             {
               curindx++;
@@ -115,6 +124,7 @@ namespace system
               
               yield break;
             }
+          }
         }
         yield return null;
       }
