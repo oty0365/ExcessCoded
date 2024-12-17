@@ -20,6 +20,7 @@ public class RayCaster : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Physics.Raycast(mousePos, transform.forward,out hit,Mathf.Infinity);
+            Debug.Log(hit.collider);
         }
 
     }

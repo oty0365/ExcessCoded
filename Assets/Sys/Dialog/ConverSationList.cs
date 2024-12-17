@@ -7,6 +7,7 @@ namespace system
     {
         public DialogNode dialogNode;
         public int idx;
+        public int eventIdx;
     }
     public static class ConversationList
     {

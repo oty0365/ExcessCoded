@@ -6,13 +6,19 @@ using UnityEngine;
 
 public class CardMasterAlfred : MonoBehaviour
 {
-    public Animator _ani;
+    private Animator _ani;
+
+    private void Start()
+    {
+        _ani = GetComponent<Animator>();
+    }
 
     public void ShakeHand()
     {
         Conversation.pause = true;
+        Debug.Log(1);
         _ani.SetInteger("behave",1);
-        
+
     }
 
     public void ReturnHand()

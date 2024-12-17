@@ -23,19 +23,4 @@ MonoBehaviour:
   respond2: {fileID: 0}
   isSelectingRight: 0
   isQuest: 0
-  comingEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5591106083887012050, guid: 00c162dfd5b15e34985d66fc7fc46fce,
-          type: 3}
-        m_TargetAssemblyTypeName: CardMasterAlfred, Assembly-CSharp
-        m_MethodName: ShakeHand
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  isEvent: 1

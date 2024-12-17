@@ -19,6 +19,6 @@ namespace system
         public DialogNode respond2;
         [Header("우선적으로 선택할 선택지")] public bool isSelectingRight;
         [Header("퀘스트의 여부")] public bool isQuest;
-        [Header("발생할 이벤트")] public UnityEvent comingEvent;
+        [Header("이벤트의 여부")] public bool isEvent;
     }
 }

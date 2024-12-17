@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace system
@@ -29,10 +30,12 @@ namespace system
     private float _value;
     private int _respond;
     public int curindx;
+    public int cureventindx;
     private DialogNode _originHead;
     [Header("말을 반복하는지에대한 여부")]
     public bool repeat;
     public Action startTalk;
+    public UnityEvent[] eventsWhileTalk;
     public static bool pause;
     private void Start()
     {
@@ -67,6 +70,7 @@ namespace system
       {
         curLocation = ConversationList.Dialogs[talker];
         curindx = curLocation.idx;
+        cureventindx = curLocation.eventIdx;
         header = curLocation.dialogNode;
       }
       else
@@ -102,7 +106,12 @@ namespace system
           }
           if (Input.GetKeyDown(KeyCode.Space) && !header.dialogs[curindx].canSelect)
           {
-            header.dialogs[curindx].comingEvent.Invoke();
+            if (header.dialogs[curindx].isEvent)
+            {
+              eventsWhileTalk[cureventindx].Invoke();
+              cureventindx++;
+            }
+            //header.dialogs[curindx].comingEvent.Invoke();
             if (curindx < header.dialogs.Length-1)
             {
               curindx++;
@@ -124,6 +133,9 @@ namespace system
               
               yield break;
             }
+
+            curLocation.idx = curindx;
+            curLocation.eventIdx = cureventindx;
           }
         }
         yield return null;
@@ -195,7 +207,7 @@ namespace system
     public void Respond1()
     {
       _respond = 1;
-      header.dialogs[curindx].comingEvent.Invoke();
+      //header.dialogs[curindx].comingEvent.Invoke();
     }
 
     public void Respond2()

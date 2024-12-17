@@ -1181,7 +1181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &142870392719808639
 Transform:
   m_ObjectHideFlags: 0
@@ -1246,7 +1246,9 @@ MonoBehaviour:
   talker: "\uCE74\uB4DC \uB9C8\uC2A4\uD130 \uC54C\uD504\uB808\uB4DC"
   header: {fileID: 11400000, guid: 5bc7df3889201524f8b0fc8099aa0c39, type: 2}
   curindx: 0
+  cureventindx: 0
   repeat: 0
+  eventsWhileTalk: []
 --- !u!114 &5591106083887012050
 MonoBehaviour:
   m_ObjectHideFlags: 0
