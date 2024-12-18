@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: cm-5
   m_EditorClassIdentifier: 
   faceImg: {fileID: 0}
-  characterName: 
-  diaText: 
+  characterName: "\uC54C\uD504\uB808\uB4DC"
+  diaText: "\uC774\uC81C \uBCF8\uACA9\uC801\uC73C\uB85C\n\uB8F0\uC744 \uC54C\uC838\uC8FC\uC5B4
+    \uBCF4\uB3C4\uB85D \uD558\uACA0\uB2E4."
   canSelect: 0
   selection1: 
   selection2: 
@@ -22,6 +23,4 @@ MonoBehaviour:
   respond2: {fileID: 0}
   isSelectingRight: 0
   isQuest: 0
-  comingEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  isEvent: 1

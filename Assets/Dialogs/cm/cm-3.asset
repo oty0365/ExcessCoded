@@ -15,7 +15,7 @@ MonoBehaviour:
   faceImg: {fileID: 0}
   characterName: "\uC54C\uD504\uB808\uB4DC"
   diaText: "\uC6B0\uC120 \uAE30\uBCF8\uC801\uC778 \uB8F0\uC744 \uB9D0\uD558\uAE30
-    \uC804\uC5D0 \uC545\uC218\uD55C\uBC88 \uD558\uC790"
+    \uC804\uC5D0 \n\uC545\uC218\uD55C\uBC88 \uD558\uC790"
   canSelect: 0
   selection1: 
   selection2: 

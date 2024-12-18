@@ -9,19 +9,19 @@ public class RayCaster : MonoBehaviour
     public Camera mainCam;
     public Vector3 mousePos;
     public RaycastHit hit;
+    public string tag;
     private void Awake()
     {
         instance = this;
     }
 
-    void Update()
+    private void Update()
     {
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButtonDown(0))
+        if (!Input.GetMouseButtonDown(0)) return;
+        var ray = mainCam.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
-            Physics.Raycast(mousePos, transform.forward,out hit,Mathf.Infinity);
-            Debug.Log(hit.collider);
+            tag = hit.collider.tag;
         }
-
     }
 }

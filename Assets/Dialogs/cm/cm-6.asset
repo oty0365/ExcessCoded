@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23659185424b6a94d8cbec6b6b7e934d, type: 3}
-  m_Name: cm-4
+  m_Name: cm-6
   m_EditorClassIdentifier: 
   faceImg: {fileID: 0}
   characterName: "\uC54C\uD504\uB808\uB4DC"
-  diaText: "\uC88B\uC740 \uC131\uD488\uC744 \uC9C0\uB154\uAD70.."
+  diaText: "\uBA3C\uC800 \uC774\uAC74 \uB108\uC758 \uB371\uC774\uB2E4."
   canSelect: 0
   selection1: 
   selection2: 
@@ -22,4 +22,4 @@ MonoBehaviour:
   respond2: {fileID: 0}
   isSelectingRight: 0
   isQuest: 0
-  isEvent: 0
+  isEvent: 1

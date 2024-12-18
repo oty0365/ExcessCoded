@@ -57,7 +57,6 @@ namespace system
       _conversationModal.SetActive(false);
       _originHead = header;
       curindx = 0;
-      Talk();
     }
 
     public void Talk()
@@ -65,13 +64,16 @@ namespace system
       _conversationModal.SetActive(true);
       _selectionModal.SetActive(false);
       _dialogModal.SetActive(true);
-      
+      /*foreach (var i in ConversationList.Dialogs)
+      {
+        Debug.Log(i.Key+" "+i.Value.dialogNode+" "+i.Value.idx+" "+i.Value.eventIdx);
+      }*/
       if (ConversationList.Dialogs.ContainsKey(talker))
       {
-        curLocation = ConversationList.Dialogs[talker];
-        curindx = curLocation.idx;
-        cureventindx = curLocation.eventIdx;
-        header = curLocation.dialogNode;
+          curLocation = ConversationList.Dialogs[talker];
+          curindx = curLocation.idx;
+          cureventindx = curLocation.eventIdx;
+          header = curLocation.dialogNode;
       }
       else
       {
@@ -83,18 +85,25 @@ namespace system
         header = _originHead;
       }
       StartCoroutine(TalkFlow());
-
     }
 
-    private IEnumerator TalkFlow()
+    public IEnumerator TalkFlow()
     {
+      if (pause)
+      {
+        _conversationModal.SetActive(false);
+        UploadScripts();
+        yield break;
+      }
       PutText();
+
       while (true)
       {
         if (pause)
         {
           _conversationModal.SetActive(false);
-          yield return null;
+          UploadScripts();
+          yield break;
         }
         else
         {
@@ -102,6 +111,7 @@ namespace system
           {
             _selectionModal.SetActive(true);
             StartCoroutine(SelectionFlow());
+            UploadScripts();
             yield break;
           }
           if (Input.GetKeyDown(KeyCode.Space) && !header.dialogs[curindx].canSelect)
@@ -115,7 +125,11 @@ namespace system
             if (curindx < header.dialogs.Length-1)
             {
               curindx++;
-              PutText();
+              if (!pause)
+              {
+                PutText();
+              }
+              UploadScripts();
             }
             else
             {
@@ -130,7 +144,7 @@ namespace system
                 curLocation.idx = curindx-1;
                 ConversationList.Dialogs[talker] = curLocation;
               }
-              
+              UploadScripts();
               yield break;
             }
 
@@ -213,6 +227,13 @@ namespace system
     public void Respond2()
     {
       _respond = 2;
+    }
+
+    public void UploadScripts()
+    {
+      curLocation.dialogNode = header;
+      curLocation.idx = curindx;
+      ConversationList.Dialogs[talker] = curLocation;
     }
   }
 }
