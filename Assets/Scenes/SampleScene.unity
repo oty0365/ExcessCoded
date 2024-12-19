@@ -6506,7 +6506,7 @@ GameObject:
   - component: {fileID: 1306148146}
   m_Layer: 0
   m_Name: playerDeck
-  m_TagString: Untagged
+  m_TagString: deck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6530,7 +6530,7 @@ MonoBehaviour:
   - {fileID: 8794053033490026811, guid: d6f0b17785384ca4f8e8e3a6528dd2c0, type: 3}
   - {fileID: 8794053033490026811, guid: d6f0b17785384ca4f8e8e3a6528dd2c0, type: 3}
   currentHeight: {x: 0, y: 0, z: 0}
-  hand: {fileID: 0}
+  hand: {fileID: 2045391169}
 --- !u!4 &1306148145
 Transform:
   m_ObjectHideFlags: 0
@@ -12192,6 +12192,20 @@ MonoBehaviour:
       - m_Target: {fileID: 1181188622972345276}
         m_TargetAssemblyTypeName: CardMasterAlfred, Assembly-CSharp
         m_MethodName: GameTutor2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1181188622972345276}
+        m_TargetAssemblyTypeName: CardMasterAlfred, Assembly-CSharp
+        m_MethodName: DrawPhase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

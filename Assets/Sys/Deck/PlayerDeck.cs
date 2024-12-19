@@ -9,7 +9,7 @@ public class PlayerDeck : MonoBehaviour
     public static PlayerDeck instance;
     public List<Card> Cards;
     public Vector3 currentHeight;
-    public static bool canDraw;
+    public bool canDraw;
     public GameObject hand;
     private void Awake()
     {

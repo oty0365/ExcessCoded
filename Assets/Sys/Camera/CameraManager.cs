@@ -17,6 +17,7 @@ public class CameraManager : MonoBehaviour
     public void CamChange(int camidx)
     {
         currentCam = camList[camidx];
+        RayCaster.instance.mainCam = currentCam;
         UpdateCam();
     }
 
