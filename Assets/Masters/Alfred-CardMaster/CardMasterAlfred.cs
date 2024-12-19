@@ -13,16 +13,25 @@ public enum BeHaves
 }
 public class CardMasterAlfred : MonoBehaviour
 {
+    public static CardMasterAlfred instance;
     private Animator _ani;
     public BeHaves beHaves;
     public Conversation conversation;
     public GameObject exampleDeck;
     public Animator exDeckAni;
+    public GameObject playerDeck;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
         beHaves = BeHaves.Idle;
         _ani = GetComponent<Animator>();
         exampleDeck.SetActive(false);
+        playerDeck.SetActive(false);
         StartCoroutine(StartFlow());
     }
 
@@ -93,8 +102,25 @@ public class CardMasterAlfred : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         exDeckAni.SetBool("go",true);
-        yield return new WaitForSeconds(2.3f);
-        exampleDeck.SetActive(false);
         Conversation.pause = false;
+    }
+
+    public void DrawTutor()
+    {
+        CameraManager.instance.CamChange(2);
+        playerDeck.SetActive(true);
+        StartCoroutine(DrawTutorFlow());
+    }
+
+    private IEnumerator DrawTutorFlow()
+    {
+        yield return new WaitForSeconds(0.7f);
+        Conversation.pause = false;
+        conversation.Talk();
+    }
+
+    public void DrawPhase()
+    {
+        Conversation.pause = true;
     }
 }
