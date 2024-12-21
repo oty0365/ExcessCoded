@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23659185424b6a94d8cbec6b6b7e934d, type: 3}
+  m_Name: cm-12
+  m_EditorClassIdentifier: 
+  faceImg: {fileID: 0}
+  characterName: "\uC54C\uD504\uB808\uB4DC"
+  diaText: "\uC800\uAE30 \uBCF4\uC774\uB294 int(4)\uAC00 \uBCF4\uC774\uB294\uAC00?"
+  canSelect: 0
+  selection1: 
+  selection2: 
+  respond1: {fileID: 0}
+  respond2: {fileID: 0}
+  isSelectingRight: 0
+  isQuest: 0
+  isEvent: 0

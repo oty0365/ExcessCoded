@@ -20,6 +20,7 @@ public class CardMasterAlfred : MonoBehaviour
     public GameObject exampleDeck;
     public Animator exDeckAni;
     public GameObject playerDeck;
+    public GameObject playerStatus;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class CardMasterAlfred : MonoBehaviour
         _ani = GetComponent<Animator>();
         exampleDeck.SetActive(false);
         playerDeck.SetActive(false);
+        playerStatus.SetActive(false);
         StartCoroutine(StartFlow());
     }
 
@@ -122,5 +124,29 @@ public class CardMasterAlfred : MonoBehaviour
     public void DrawPhase()
     {
         Conversation.pause = true;
+    }
+    public void GameTutor3()
+    {
+        StartCoroutine(GameTutor3Flow());
+    }
+    private IEnumerator GameTutor3Flow()
+    {
+        yield return new WaitForSeconds(1.6f);
+        Conversation.pause = false;
+        conversation.Talk();
+    }
+    public void GameTutor4()
+    {
+        playerStatus.SetActive(true);
+    }
+    public void GameTutor5()
+    {
+        CameraManager.instance.CamChange(3);
+        playerStatus.SetActive(false);
+    }
+    public void GameTutor6()
+    {
+        CameraManager.instance.CamChange(0);
+        playerStatus.SetActive(true);
     }
 }
