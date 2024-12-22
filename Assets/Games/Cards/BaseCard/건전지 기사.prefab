@@ -267,9 +267,10 @@ GameObject:
   - component: {fileID: 850636889409902204}
   - component: {fileID: 8791056012427853483}
   - component: {fileID: 8794053033490026811}
+  - component: {fileID: 6981436779869245966}
   m_Layer: 0
   m_Name: "\uAC74\uC804\uC9C0 \uAE30\uC0AC"
-  m_TagString: Untagged
+  m_TagString: card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -373,6 +374,27 @@ MonoBehaviour:
   atkText: {fileID: 6655634832187411015}
   hpText: {fileID: 8745200257045962648}
   isInDeck: 0
+--- !u!65 &6981436779869245966
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140236491913729696}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.806009, y: 7, z: 0.0037565231}
+  m_Center: {x: 0.09788126, y: 0, z: 0.015571117}
 --- !u!1 &3545277776427097095
 GameObject:
   m_ObjectHideFlags: 0

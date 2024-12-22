@@ -9,6 +9,7 @@ TagManager:
   - selection
   - cardmasterhand
   - deck
+  - card
   layers:
   - Default
   - TransparentFX

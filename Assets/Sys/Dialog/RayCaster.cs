@@ -22,6 +22,11 @@ public class RayCaster : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
             tag = hit.collider.tag;
+            if (tag == "card")
+            {
+
+            }
         }
+
     }
 }
