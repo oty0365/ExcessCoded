@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8033462216363157533}
   - component: {fileID: 1592854745993979474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 917142246477420193}
   - component: {fileID: 358635529429389280}
   - component: {fileID: 8745200257045962648}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036787535563718268}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.011}
+  m_LocalPosition: {x: 0, y: 0, z: -0.001}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 8791056012427853483}
   - component: {fileID: 8794053033490026811}
   - component: {fileID: 6981436779869245966}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "\uAC74\uC804\uC9C0 \uAE30\uC0AC"
   m_TagString: card
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.186, y: 0.293, z: 10.5}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 1}
+  m_LocalScale: {x: 0.11, y: 0.11, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5253425596848071342}
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 5033153460891622031}
   - component: {fileID: 4880606021597511429}
   - component: {fileID: 7095098775818668317}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: coast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5253425596848071342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: midle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 2923355541677523033}
   - component: {fileID: 4497684179553162592}
   - component: {fileID: 6655634832187411015}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Dmg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -625,7 +625,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6755633986807436861}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.007}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0001}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 7895581378490152416}
   - component: {fileID: 2487335306958060503}
   - component: {fileID: 8684100497337123489}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cardName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,6 +956,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 940930978037588429, guid: 4934b9e1ad5da024cbd991a1422422f0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5808700538992736338, guid: 4934b9e1ad5da024cbd991a1422422f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1006,10 +1011,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5835162737775491125, guid: 4934b9e1ad5da024cbd991a1422422f0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297223610545194187, guid: 4934b9e1ad5da024cbd991a1422422f0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8955153521895346094, guid: 4934b9e1ad5da024cbd991a1422422f0,
         type: 3}
       propertyPath: m_Name
       value: batteryKnight
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955153521895346094, guid: 4934b9e1ad5da024cbd991a1422422f0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
