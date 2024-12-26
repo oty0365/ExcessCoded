@@ -149,4 +149,8 @@ public class CardMasterAlfred : MonoBehaviour
         CameraManager.instance.CamChange(0);
         playerStatus.SetActive(true);
     }
+    public void GameTutor7()
+    {
+
+    }
 }

@@ -33,7 +33,6 @@ public class CardUse : MonoBehaviour
     {
         if (isPlacing)
         {
-            Debug.Log("1");
             if (selectedCard.cardType == CardType.HardWare)
             {
                 Debug.Log("2");
@@ -45,6 +44,8 @@ public class CardUse : MonoBehaviour
                     Objective = RayCaster.instance.hit.transform;
                     RayCaster.instance.hit.collider.gameObject.GetComponent<CardPutSlot>().isUsing = true;
                     selectedCard.gameObject.transform.rotation = Quaternion.Euler(90, 0, 0);
+                    PlayerStatusAct1.instance.memory -= selectedCard.coast;
+                    PlayerStatus.instance.StatusUpdate();
                     StartCoroutine(PlaceFlow());
 
                 }
@@ -68,5 +69,7 @@ public class CardUse : MonoBehaviour
         selectedCard.gameObject.transform.parent = Objective;
         yield return new WaitForSeconds(0.2f);
         CameraManager.instance.CamChange(0);
+        yield return new WaitForSeconds(0.8f);
+        CameraManager.instance.CamChange(1);
     }
 }

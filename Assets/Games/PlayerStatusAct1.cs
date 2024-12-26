@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class PlayerStatusAct1 : PlayerStatus
 {
-
+    public void UpdateMemory()
+    {
+        memoryText.text = memory.ToString();
+    }
 
     void Update()
     {
